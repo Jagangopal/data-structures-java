@@ -1,7 +1,7 @@
 package src.main.ds.binarysearchtree;
 
 public class LcaBinarySearchTree {
-    
+
     /**
      * Time Complexity: O(n)
      * Space Complexity: O(1)
