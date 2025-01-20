@@ -13,7 +13,12 @@ class Node{
     }
 }
 public class MergeKSortedLists {
-
+    /**
+     * Time Complexity: O(n log k)
+     * Space Complexity: O(log k)
+     * @param arr
+     * @return
+     */
     static Node mergeKLists(List<Node> arr) {
         PriorityQueue<Node> pq = new PriorityQueue<>((a,b) -> a.data - b.data);
         for(Node head: arr){
