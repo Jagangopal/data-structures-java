@@ -1,9 +1,10 @@
 package src.main.ds.binarytree;
 
 public class Node {
-    int data;
-    Node left, right;
-    Node(int data){
+    public int data;
+    public Node left;
+    public Node right;
+    public Node(int data){
         this.data = data;
         left = right = null;
     }
