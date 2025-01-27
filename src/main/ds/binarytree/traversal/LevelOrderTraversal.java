@@ -8,7 +8,12 @@ import java.util.List;
 import java.util.Queue;
 
 public class LevelOrderTraversal {
-
+    /**
+     * Iterative Level Order Traversal
+     * Time Complexity: O(n)
+     * Space Complexity: O(h) height of the tree
+     * @param root
+     */
     public void iterativeLevelOrderTraversal(Node root){
         List<Integer> resultList = new ArrayList<>();
         Queue<Node> queue = new LinkedList<>();
