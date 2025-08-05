@@ -10,7 +10,7 @@ public class BinaryTreeSize {
      */
     public int calculateSizeOfBT(Node binaryTree){
         int leftSize = (binaryTree.left == null)? 0: calculateSizeOfBT(binaryTree.left);
-        int rightSize = (binaryTree.left == null)? 0: calculateSizeOfBT(binaryTree.right);
+        int rightSize = (binaryTree.right == null)? 0: calculateSizeOfBT(binaryTree.right);
         return 1 + leftSize + rightSize;
     }
     public static void main(String[] args){
