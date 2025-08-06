@@ -3,6 +3,10 @@ package src.main.ds.graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(n * m)
+ */
 public class OrangesRotten {
 
     static boolean isSafe(int i, int j, int m, int n){
