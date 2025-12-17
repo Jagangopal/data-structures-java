@@ -12,7 +12,8 @@ public class MergeTwoLists {
      * @return
      */
     public Node mergeTwoLinkedLists(Node list1, Node list2){
-        Node prev = new Node(-1);
+        Node dummy = new Node(-1);
+        Node prev = dummy;
         while(list1 != null && list2 != null){
             if(list1.data < list2.data){
                 prev.next = list1;
@@ -21,10 +22,10 @@ public class MergeTwoLists {
                 prev.next = list2;
                 list2 = list2.next;
             }
+            prev = prev.next;
         }
-        prev = prev.next;
         prev.next = (list1 == null)? list2: list1;
-        return prev.next;
+        return dummy.next;
     }
 
     public static void main(String[] args){
@@ -33,7 +34,7 @@ public class MergeTwoLists {
         list1.next = new Node(2);
 
         Node list2 = new Node(3);
-        list1.next = new Node(4);
+        list2.next = new Node(4);
 
         Node result = mergeTwoLists.mergeTwoLinkedLists(list1, list2);
         while(result != null){
