@@ -3,6 +3,7 @@ package src.main.ds.heap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 class Node{
     int data;
@@ -20,18 +21,17 @@ public class MergeKSortedLists {
      * @return
      */
     static Node mergeKLists(List<Node> arr) {
-        PriorityQueue<Node> pq = new PriorityQueue<>((a,b) -> a.data - b.data);
-        for(Node head: arr){
-            pq.add(head);
-        }
+        Queue<Node> heap = new PriorityQueue<>((a,b) -> (a.data - b.data));
+        for(Node node: arr)
+            heap.add(node);
         Node dummy = new Node(-1);
         Node tail = dummy;
-        while (!pq.isEmpty()){
-            Node top = pq.poll();
+        while(!heap.isEmpty()){
+            Node top = heap.poll();
             tail.next = top;
             tail = top;
             if(top.next != null)
-                pq.add(top.next);
+                heap.add(top.next);
         }
         return dummy.next;
     }

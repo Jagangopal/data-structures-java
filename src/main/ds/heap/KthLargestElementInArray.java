@@ -13,11 +13,9 @@ public class KthLargestElementInArray {
      */
     public int findKthElement(int[] inputArray, int k){
         Queue<Integer> heap = new PriorityQueue<>();
-        for(int value:inputArray){
+        for(int value: inputArray){
             heap.add(value);
-            if(heap.size() > k){
-                heap.poll();
-            }
+            if(heap.size() > k) heap.poll();
         }
         return heap.peek();
     }
