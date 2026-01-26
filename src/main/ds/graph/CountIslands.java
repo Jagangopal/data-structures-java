@@ -3,6 +3,12 @@ package src.main.ds.graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * count the number of islands in a grid
+ * An island is surrounded by water and is formed by connecting adjacent lands horizontally, vertically, or diagonally.
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(n * m)
+ */
 public class CountIslands {
     // Check if the cell (r, c) is valid for BFS traversal
     // It must lie within grid bounds, contain land ('L'), and not be visited yet

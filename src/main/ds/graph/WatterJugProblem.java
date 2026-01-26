@@ -50,7 +50,7 @@ public class WatterJugProblem {
                 visited[jug1 - pour1to2][jug2 + pour1to2] = true;
                 queue.add(new int[]{jug1 - pour1to2, jug2 + pour1to2, steps + 1});
             }
-            //6. por jug2 to jug1
+            //6. pour jug2 to jug1
             int pour2To1 = Math.min(m-jug1, jug2);
             if(!visited[jug1 + pour2To1][jug2 - pour2To1]){
                 visited[jug1 + pour2To1][jug2 - pour2To1] = true;
